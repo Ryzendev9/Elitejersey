@@ -67,52 +67,78 @@ body {
 /* NAVBAR */
 /* ========================================================= */
 
+/* ========================================================= */
+/* NAVBAR – MOBILE WITH MENU (FINAL FIX) */
+/* ========================================================= */
+
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(15, 20, 32, 0.9);
+    background: rgba(15, 20, 32, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     border-bottom: 1px solid rgba(255,255,255,0.05);
-    padding:0;
 }
 
+/* MOBILE DEFAULT */
 .navbar-wrapper {
-    height: 64px;
-    padding:0 16px;
+    min-height: 96px; /* LEBIH TINGGI UNTUK MENU */
+    padding: 8px 14px;
+    display: flex;
+    flex-direction: column; /* JADI 2 BARIS */
+    justify-content: center;
+    gap: 6px;
+}
+
+/* BARIS ATAS: LOGO + BUTTON */
+.navbar-top {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* LOGO */
 .navbar-logo {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
-    line-height:1;
+    line-height: 1;
 }
 
 .logo-main {
-    color: var(--color-text-main);
-    display:inline-block;
+    color: #ffffff;
 }
 
 .logo-accent {
-    color: var(--color-primary);
-    margin-left: 4px;
-    display:inline-block;
+    color: #ff4d4d;
+}
+
+/* BUTTON */
+.navbar .btn-primary {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    border-radius: 18px;
+    box-shadow: none;
+}
+
+/* BARIS BAWAH: MENU */
+.navbar-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
 }
 
 .navbar-menu a {
-    margin: 0 var(--space-2);
+    font-size: 0.8rem;
+    color: #c7c9d3;
     text-decoration: none;
-    color: var(--color-text-secondary);
-    font-weight: 500;
-    transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .navbar-menu a:hover {
-    color: var(--color-primary);
+    color: #ff4d4d;
 }
 
 /* ========================================================= */
@@ -455,55 +481,7 @@ body {
         height: 24px;
     }
 }
-/* ========================================================= */
-/* NAVBAR – MOBILE FIRST (DEFAULT = HP) */
-/* ========================================================= */
 
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(15, 20, 32, 0.9);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-.navbar-wrapper {
-    height: 60px; /* HP height */
-    padding: 0 14px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* LOGO */
-.navbar-logo {
-    font-size: 1.2rem; /* kecil untuk HP */
-    font-weight: 700;
-    line-height: 1;
-}
-
-.logo-main {
-    color: #ffffff;
-}
-
-.logo-accent {
-    color: #ff4d4d;
-}
-
-/* MENU (SEMBUNYI DI HP) */
-.navbar-menu {
-    display: none;
-}
-
-/* BUTTON */
-.navbar .btn-primary {
-    padding: 8px 16px;
-    font-size: 0.8rem;
-    border-radius: 18px;
-    box-shadow: none;
-}
 /* ========================================================= */
 /* NAVBAR – TABLET */
 /* ========================================================= */
