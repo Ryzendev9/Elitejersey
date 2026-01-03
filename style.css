@@ -455,3 +455,122 @@ body {
         height: 24px;
     }
 }
+/* ========================================================= */
+/* NAVBAR – MOBILE FIRST (DEFAULT = HP) */
+/* ========================================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 20, 32, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.navbar-wrapper {
+    height: 60px; /* HP height */
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGO */
+.navbar-logo {
+    font-size: 1.2rem; /* kecil untuk HP */
+    font-weight: 700;
+    line-height: 1;
+}
+
+.logo-main {
+    color: #ffffff;
+}
+
+.logo-accent {
+    color: #ff4d4d;
+}
+
+/* MENU (SEMBUNYI DI HP) */
+.navbar-menu {
+    display: none;
+}
+
+/* BUTTON */
+.navbar .btn-primary {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    border-radius: 18px;
+    box-shadow: none;
+}
+/* ========================================================= */
+/* NAVBAR – TABLET */
+/* ========================================================= */
+
+@media (min-width: 768px) {
+
+    .navbar-wrapper {
+        height: 72px;
+        padding: 0 24px;
+    }
+
+    .navbar-logo {
+        font-size: 1.5rem;
+    }
+
+    /* MENU MUNCUL */
+    .navbar-menu {
+        display: flex;
+        gap: 24px;
+    }
+
+    .navbar-menu a {
+        text-decoration: none;
+        font-size: 0.95rem;
+        color: #c7c9d3;
+        transition: color 0.3s ease;
+    }
+
+    .navbar-menu a:hover {
+        color: #ff4d4d;
+    }
+
+    .navbar .btn-primary {
+        padding: 10px 22px;
+        font-size: 0.9rem;
+        border-radius: 22px;
+    }
+
+}
+/* ========================================================= */
+/* NAVBAR – DESKTOP */
+/* ========================================================= */
+
+@media (min-width: 1024px) {
+
+    .navbar-wrapper {
+        height: 80px;
+        padding: 0 40px;
+    }
+
+    .navbar-logo {
+        font-size: 1.8rem;
+    }
+
+    .navbar-menu {
+        gap: 32px;
+    }
+
+    .navbar-menu a {
+        font-size: 1rem;
+    }
+
+    .navbar .btn-primary {
+        padding: 12px 32px;
+        font-size: 1rem;
+        border-radius: 30px;
+        box-shadow: 0 8px 30px rgba(255,77,77,0.35);
+    }
+
+}
